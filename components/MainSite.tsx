@@ -15,7 +15,9 @@ const MainSite: React.FC = () => {
         </div>
         
         <div className="relative z-10 px-6 pb-16 text-white max-w-3xl mx-auto w-full">
-          <p className="text-emerald-400 font-bold tracking-widest text-sm uppercase mb-3">Expert em Harmonização Natural 💚</p>
+          <p className="text-emerald-400 font-bold tracking-widest text-sm uppercase mb-3">
+            {EXPERT.profession} 💚
+          </p>
           <h1 className="text-5xl md:text-7xl font-serif mb-6 leading-[1.1]">
             Eu sou Clézia Figueira.
           </h1>

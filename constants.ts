@@ -47,22 +47,42 @@ export const IMAGES = {
 export const QUIZ_QUESTIONS = [
   {
     id: 1,
-    question: "Qual sua maior insatisfação hoje?",
-    options: ["Rugas e Linhas de Expressão", "Flacidez no Rosto/Pescoço", "Contorno Corporal", "Região Íntima", "Manchas/Textura da Pele"]
+    question: "Em qual área você deseja focar sua transformação hoje?",
+    options: [
+      "Facial (Rugas, lábios, contorno)",
+      "Corporal (Gordura, flacidez, glúteos)",
+      "Íntima (Estética e rejuvenescimento)",
+      "Global (Quero cuidar de tudo)"
+    ]
   },
   {
     id: 2,
-    question: "O que você busca com um procedimento?",
-    options: ["Naturalidade acima de tudo", "Mudança visível e marcante", "Prevenção do envelhecimento", "Recuperar a autoestima"]
+    question: "O que é mais importante para você no resultado final?",
+    options: [
+      "Naturalidade (Ninguém perceber que fiz algo)",
+      "Impacto (Mudança visível e marcante)",
+      "Recuperar contornos que o tempo levou",
+      "Melhorar a autoconfiança e bem-estar"
+    ]
   },
   {
     id: 3,
-    question: "Você já realizou algum procedimento antes?",
-    options: ["Sim, e amei", "Sim, mas não tive boa experiência", "Nunca realizei nada"]
+    question: "Qual sua maior preocupação ao buscar um procedimento?",
+    options: [
+      "Ficar com aspecto artificial",
+      "Segurança e qualidade dos produtos",
+      "Dor ou tempo de recuperação",
+      "Discrição total no atendimento"
+    ]
   },
   {
     id: 4,
-    question: "Qual sua prioridade no atendimento?",
-    options: ["Exclusividade e Segurança", "Rapidez no resultado", "Preço acessível", "Tecnologia de ponta"]
+    question: "Quando você gostaria de realizar sua primeira avaliação?",
+    options: [
+      "O mais rápido possível",
+      "Nas próximas semanas",
+      "Ainda estou planejando",
+      "Quero tirar dúvidas primeiro"
+    ]
   }
 ];
