@@ -1,9 +1,9 @@
 
 import React, { useState } from 'react';
-import Quiz from './components/Quiz';
-import ResultPage from './components/ResultPage';
-import MainSite from './components/MainSite';
-import { EXPERT, IMAGES } from './constants';
+import Quiz from './components/Quiz.tsx';
+import ResultPage from './components/ResultPage.tsx';
+import MainSite from './components/MainSite.tsx';
+import { EXPERT, IMAGES } from './constants.ts';
 
 type AppState = 'welcome' | 'quiz' | 'result' | 'site';
 
