@@ -7,30 +7,44 @@ const MainSite: React.FC = () => {
 
   return (
     <div className="bg-white">
-      {/* 1. HEROI */}
-      <section className="relative min-h-screen flex flex-col justify-end">
-        <div className="absolute inset-0 z-0">
-          <img src={IMAGES.hero} alt={EXPERT.name} className="w-full h-full object-cover object-top" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent"></div>
-        </div>
-        
-        <div className="relative z-10 px-6 pb-16 text-white max-w-3xl mx-auto w-full">
-          <p className="text-emerald-400 font-bold tracking-widest text-sm uppercase mb-3">
-            {EXPERT.profession} 💚
-          </p>
-          <h1 className="text-5xl md:text-7xl font-serif mb-6 leading-[1.1]">
-            Eu sou Clézia Figueira.
-          </h1>
-          <p className="text-xl md:text-2xl text-neutral-300 font-light mb-10 max-w-lg leading-relaxed">
-            Realço sua beleza única com segurança, naturalidade e o cuidado que você merece.
-          </p>
-          
-          <div className="space-y-4">
-            <button onClick={openWA} className="w-full md:w-auto bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-8 py-6 rounded-2xl shadow-2xl transition-all active:scale-95 text-lg">
-              Agendar consulta no whatsapp
-            </button>
-            <p className="text-neutral-400 text-sm tracking-wide">Sem compromisso e totalmente personalizado</p>
+      {/* 1. HEROI - Redesenhado para máxima visibilidade da Expert */}
+      <section className="relative min-h-screen flex flex-col md:flex-row bg-neutral-900 overflow-hidden">
+        {/* Lado do Conteúdo (Texto) */}
+        <div className="relative z-20 flex-1 flex flex-col justify-center px-6 pt-32 pb-12 md:pt-0 md:pb-0 md:pl-12 lg:pl-24 bg-gradient-to-b from-transparent via-neutral-900/40 to-neutral-900 md:bg-none">
+          <div className="max-w-xl">
+            <p className="text-emerald-400 font-bold tracking-widest text-sm uppercase mb-4 animate-fade-in">
+              {EXPERT.profession} 💚
+            </p>
+            <h1 className="text-5xl md:text-6xl lg:text-8xl font-serif text-white mb-6 leading-[1.1]">
+              Eu sou <br/><span className="text-emerald-50">Clézia Figueira.</span>
+            </h1>
+            <p className="text-lg md:text-xl lg:text-2xl text-neutral-300 font-light mb-10 leading-relaxed">
+              Realço sua beleza única com segurança, naturalidade e o cuidado especializado que você merece.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4">
+              <button onClick={openWA} className="group relative overflow-hidden bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-8 py-6 rounded-2xl shadow-2xl transition-all active:scale-95 text-lg flex items-center justify-center gap-3">
+                <span className="relative z-10">Agendar pelo WhatsApp</span>
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 group-hover:translate-x-1 transition-transform" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                </svg>
+              </button>
+            </div>
+            <p className="text-neutral-500 text-xs mt-4 tracking-widest uppercase">Atendimento Premium em Gurupi-TO</p>
           </div>
+        </div>
+
+        {/* Lado da Imagem (Hero Photo) */}
+        <div className="absolute inset-0 md:relative md:flex-1 h-screen md:h-auto overflow-hidden">
+          <img 
+            src={IMAGES.hero} 
+            alt={EXPERT.name} 
+            className="w-full h-full object-cover object-top md:object-right-top filter brightness-90 md:brightness-100" 
+          />
+          {/* Overlay Mobile para garantir leitura */}
+          <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 via-neutral-900/20 to-transparent md:hidden"></div>
+          {/* Overlay Desktop para suavizar transição */}
+          <div className="hidden md:block absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-neutral-900 to-transparent"></div>
         </div>
       </section>
 
